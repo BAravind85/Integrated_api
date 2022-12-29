@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import './SearchContainer.css';
+
 function SearchContainer() {
   return (
     <div className='search-container'>
@@ -12,4 +13,4 @@ function SearchContainer() {
   )
 }
 
-export default SearchContainer
+export default SearchContainer;

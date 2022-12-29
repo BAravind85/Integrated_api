@@ -1,0 +1,14 @@
+
+  .gip {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .giphy {
+    padding: 0 2px;
+  }
+
+  

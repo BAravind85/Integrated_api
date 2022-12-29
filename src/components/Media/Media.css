@@ -1,0 +1,19 @@
+.row{
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.row-header{
+    display:flex;
+    margin-bottom: 5px;
+}
+.row-header img{
+    margin-right: 6px;
+}
+.get{
+    color:gray;
+    position: absolute;
+    top: 150px;
+    right: 4ch;
+}

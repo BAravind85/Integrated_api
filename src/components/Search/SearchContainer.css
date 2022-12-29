@@ -20,5 +20,13 @@
     outline: none;
 }
 .search-icon{
-    
+    background: linear-gradient(90deg, #fc45c5 0%, #fc4584 76%);
+    height: 45px;
+    width:45px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-container .MuiSvgIcon-root{
+    font-size: 36px;
 }

@@ -1,0 +1,11 @@
+.gifs {
+    margin: 0 auto;
+    width:500;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .gif {
+    padding: 0 2px;
+  }
+  
