@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './Api.css'
-// import Loader from '.../Pages/Loader'
+import Loader from '../../Pages/Loader';
 
 const Api = () => {
   const [data, setData] = useState([]);
@@ -36,7 +36,7 @@ const Api = () => {
 
   const renderGifs = () => {
 if(isLoading){
-  return <h1>loading...</h1>
+  return <Loader/>
 }
     return data.map(el => {
       return (

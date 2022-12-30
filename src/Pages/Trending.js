@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import './Trending.css';
-import Loader from './Loader';
+import "./Trending.css";
+import Loader from "./Loader";
 import Header from "../components/Header/Header";
-import Paginate from '../components/pagination/Pagination';
+import Paginate from "../components/pagination/Paginate";
 
 const Trending = () => {
   const [data, setData] = useState([]);
@@ -30,8 +30,8 @@ const Trending = () => {
         const results = await axios("https://api.giphy.com/v1/gifs/trending", {
           params: {
             api_key: "OnA4BBjOhNTuYNfOdlXrEplNLluKA32E",
-            limit: 100
-          }
+            limit: 100,
+          },
         });
 
         console.log(results);
@@ -47,13 +47,13 @@ const Trending = () => {
   }, []);
 
   const renderGifs = () => {
-if(isLoading){
-  return <Loader/>;
-}
-    return currentItems.map(el => {
+    if (isLoading) {
+      return <Loader />;
+    }
+    return currentItems.map((el) => {
       return (
         <div key={el.id} className="giphy">
-          <img src={el.images.fixed_height.url} alt='img' />
+          <img src={el.images.fixed_height.url} alt="img" />
         </div>
       );
     });
@@ -70,10 +70,10 @@ if(isLoading){
       );
     }
   };
-  const handleSearchChange = event => {
+  const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
-  const handleSubmit = async event => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setIsError(false);
     setIsLoading(true);
@@ -83,8 +83,8 @@ if(isLoading){
         params: {
           api_key: "OnA4BBjOhNTuYNfOdlXrEplNLluKA32E",
           q: search,
-          limit: 100
-        }
+          limit: 100,
+        },
       });
       setData(results.data.data);
     } catch (err) {
@@ -95,16 +95,16 @@ if(isLoading){
     setIsLoading(false);
   };
 
-  const pageSelected = pageNumber => {
+  const pageSelected = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
   return (
     <div className="m-2">
-      <Header/>
+      <Header />
       {renderError()}
       <form className="form-inline justify-content-center m-2">
-         <input
+        <input
           value={search}
           onChange={handleSearchChange}
           type="text"
@@ -119,16 +119,15 @@ if(isLoading){
           Go
         </button>
       </form>
-     <Paginate
+      <Paginate
         pageSelected={pageSelected}
         currentPage={currentPage}
         itemsPerPage={itemsPerPage}
         totalItems={data.length}
       />
-      <div className="gip">{renderGifs()}</div>
+      <div className="container gifs">{renderGifs()}</div>
     </div>
   );
-}
-
+};
 
 export default Trending;
