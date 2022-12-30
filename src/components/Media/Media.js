@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from "react";
+// import React,{useState,useEffect} from "react";
 import { useNavigate } from "react-router";
 import './Media.css';
 import Api from '../api/Api';
@@ -23,7 +23,7 @@ function Media() {
             <Api/>
         </div>
       </div>
-      <div className="row">
+      {/* <div className="row">
         <div className="row-header">
           <img src='images/artists.svg' alt='Artists'/>
           <h1>Artists</h1>
@@ -49,7 +49,7 @@ function Media() {
         <div className='stories-container'>
             <h2>content</h2>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -13,7 +13,7 @@
 }
 .get{
     color:gray;
-    position: absolute;
-    top: 150px;
-    right: 4ch;
+    text-align: right;
+    align-items: end;
+    margin: 0px 0px 0px auto;
 }
